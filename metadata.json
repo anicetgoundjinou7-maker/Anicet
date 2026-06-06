@@ -1,0 +1,6 @@
+{
+  "name": "MedScientia - Anicet Goudjinou",
+  "description": "Portail d'exploration clinique, de recherche moléculaire et de diagnostic assisté par IA, personnalisé pour Anicet GOUDJINOU.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

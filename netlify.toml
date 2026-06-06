@@ -1,0 +1,26 @@
+# Configuration Netlify pour le projet MedScientia de Anicet Goudjinou
+
+[build]
+  # Commande pour générer uniquement le dossier de l'application statique (React + Vite)
+  command = "npx vite build"
+  
+  # Le dossier contenant les fichiers compilés de production pour le navigateur
+  publish = "dist"
+
+# Redirections vers les Netlify Functions pour le fonctionnement de l'API (Gemini IA) sans serveur traditionnel
+[[redirects]]
+  from = "/api/generate-fiche"
+  to = "/.netlify/functions/generate-fiche"
+  status = 200
+
+[[redirects]]
+  from = "/api/science-info"
+  to = "/.netlify/functions/science-info"
+  status = 200
+
+# Règle de redirection pour les Single Page Applications (SPA)
+# Permet de rediriger toutes les requêtes d'URL vers l'index pour éviter les erreurs 404 lors des rafraîchissements
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
